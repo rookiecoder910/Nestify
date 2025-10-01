@@ -1,4 +1,8 @@
 🏠 Nestify – PG & Mess Finder App
+---
+<img width="400" height="400" alt="nestify" src="https://github.com/user-attachments/assets/b2ac38e3-b05f-45f8-892e-6ea9b089736b" />
+
+
 
 Nestify is a mobile + backend project that helps students and working professionals find PG accommodations and Mess services nearby.
 It is powered by a Spring Boot backend and an Android frontend (Kotlin + Jetpack Compose).
