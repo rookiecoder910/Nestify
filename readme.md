@@ -90,9 +90,10 @@ GET /api/reviews/{listingId} → get all reviews
 📖 Getting Started
 1. Clone Repo
 git clone https://github.com/rookiecoder910/nestify.git
-cd nestify
 
-2. Setup Backend
+ 2. cd nestify
+
+3. Setup Backend
 
 Install Java 17+
 
