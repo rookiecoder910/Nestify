@@ -1,49 +1,53 @@
-🏠 Nestify – PG & Mess Finder App
+# 🏠 Nestify – PG & Mess Finder App
 
-Nestify is a mobile + backend project that helps students and working professionals find PG accommodations and Mess services nearby.
-It is powered by a Spring Boot backend and an Android frontend (Kotlin + Jetpack Compose).
+![GitHub Repo stars](https://img.shields.io/github/stars/rookiecoder910/nestify?style=social)
+![GitHub forks](https://img.shields.io/github/forks/rookiecoder910/nestify?style=social)
+![GitHub issues](https://img.shields.io/github/issues/rookiecoder910/nestify)
+![GitHub license](https://img.shields.io/github/license/rookiecoder910/nestify)
 
+<img width="400" height="400" alt="nestify" src="https://github.com/user-attachments/assets/b2ac38e3-b05f-45f8-892e-6ea9b089736b" />  
 
+**Nestify** is a mobile + backend project that helps students and working professionals easily find **PG accommodations** and **Mess services** nearby.
+It is powered by a **Spring Boot backend** and an **Android app (Kotlin + Jetpack Compose)**.
 
-🚀 Features
+---
 
-🔎 Search Nearby – Find PGs and Mess services based on city or location.
+## 🚀 Features
 
-🗺 Map Integration – Listings include latitude/longitude for location-based search.
+* 🔎 **Search Nearby** – Find PGs and Mess services based on city or current location.
+* 🗺 **Map Integration** – View listings with latitude/longitude and navigate easily.
+* 🎯 **Filters** – Sort by price, facilities, and availability.
+* 👤 **Dual User Roles** –
 
-🎯 Filters – Sort by price, facilities, and availability.
+  * **Seeker**: Search and review PG/Mess.
+  * **Owner**: Add and manage listings.
+* 🔐 **Authentication** – Secure login/signup using JWT.
+* ⭐ **Ratings & Reviews** – Honest feedback system for better decision-making.
 
-👤 Dual User Roles –
+---
 
-Seeker: can search and review PG/Mess.
+## 🛠 Tech Stack
 
-Owner: can add/manage listings.
+### **Backend (Spring Boot)**
 
-🔐 Authentication – Secure login/signup with JWT.
+* Spring Boot (REST APIs)
+* Spring Data JPA (Database ORM)
+* Spring Security + JWT (Authentication)
+* MySQL / PostgreSQL (Database)
 
-⭐ Ratings & Reviews – Honest feedback for better decisions.
+### **Frontend (Mobile App)**
 
-🛠 Tech Stack
-Backend (Spring Boot)
+* Android (Kotlin + Jetpack Compose)
+* Google Maps API
+* Retrofit (API calls)
 
-Spring Boot (REST APIs)
+---
 
-Spring Data JPA (Database ORM)
+## 📂 Project Structure
 
-Spring Security + JWT (Authentication)
+### **Spring Boot Backend (`nestify-backend/`)**
 
-MySQL / PostgreSQL (Database)
-
-Frontend (Mobile App)
-
-Android (Kotlin + Jetpack Compose)
-
-Google Maps API
-
-Retrofit (for API calls)
-
-📂 Project Structure
-Spring Boot Backend
+```
 nestify-backend/
 │── src/main/java/com/nestify
 │   ├── controller/        # REST Controllers
@@ -54,87 +58,109 @@ nestify-backend/
 │
 └── src/main/resources/
     ├── application.yml    # Config (DB, JWT secret, etc.)
+```
 
-Android App
+### **Android App (`nestify-android/`)**
+
+```
 nestify-android/
 │── ui/            # Jetpack Compose screens
 │── viewmodel/     # State management
 │── repository/    # API & Firebase data handling
 │── utils/         # Helpers
+```
 
-⚡ API Endpoints (Sample)
-Authentication
+---
 
-POST /api/auth/signup → register user
+## ⚡ API Endpoints (Sample)
 
-POST /api/auth/login → login & get JWT
+### **Authentication**
 
-Listings
+* `POST /api/auth/signup` → Register a new user
+* `POST /api/auth/login` → Login & receive JWT
 
-POST /api/listings → add PG/Mess (Owner only)
+### **Listings**
 
-GET /api/listings → get all listings
+* `POST /api/listings` → Add PG/Mess (Owner only)
+* `GET /api/listings` → Fetch all listings
+* `GET /api/listings/{id}` → Fetch specific listing
+* `PUT /api/listings/{id}` → Update listing (Owner only)
+* `DELETE /api/listings/{id}` → Remove listing (Owner only)
 
-GET /api/listings/{id} → get specific listing
+### **Reviews**
 
-PUT /api/listings/{id} → update listing (Owner only)
+* `POST /api/reviews/{listingId}` → Add review
+* `GET /api/reviews/{listingId}` → Get reviews for listing
 
-DELETE /api/listings/{id} → remove listing (Owner only)
+---
 
-Reviews
+## 📖 Getting Started
 
-POST /api/reviews/{listingId} → add review
+### **1. Clone Repo**
 
-GET /api/reviews/{listingId} → get all reviews
-
-📖 Getting Started
-1. Clone Repo
+```bash
 git clone https://github.com/rookiecoder910/nestify.git
+cd nestify
+```
 
- 2. cd nestify
+### **2. Setup Backend**
 
-3. Setup Backend
+* Install **Java 17+**
+* Setup **MySQL/Postgres** and update `application.yml`
+* Run server:
 
-Install Java 17+
-
-Setup MySQL/Postgres and update application.yml
-
-Run with:
-
+```bash
 ./mvnw spring-boot:run
+```
 
-3. Setup Android App
+### **3. Setup Android App**
 
-Open nestify-android/ in Android Studio
+* Open `nestify-android/` in **Android Studio**
+* Add your **Google Maps API Key** in `AndroidManifest.xml`
+* Run on **emulator/device**
 
-Add Google Maps API Key in AndroidManifest.xml
+---
 
-Run app on emulator/device
+## 🎯 Future Improvements
 
-🎯 Future Improvements
+* 📱 Online booking & payments
+* 🖼 Image uploads (Cloudinary / AWS S3)
+* 💬 In-app chat between seekers & owners
+* 🌐 Web dashboard for PG/Mess owners
 
-📱 Online booking & payments
+---
 
-🖼 Image upload (Cloudinary / S3)
+## 📸 Screenshots
 
-💬 In-app chat between seekers & owners
+> Add your app screenshots here (replace placeholders below):
 
-🌐 Web dashboard for PG/Mess owners
+| Home Screen                                  | Map View                                    | Listings                                         |
+| -------------------------------------------- | ------------------------------------------- | ------------------------------------------------ |
+| ![Home](https://via.placeholder.com/200x400) | ![Map](https://via.placeholder.com/200x400) | ![Listings](https://via.placeholder.com/200x400) |
 
-🤝 Contributing
+---
+
+## 🤝 Contributing
 
 Contributions are welcome!
 
-Fork repo
+1. Fork the repo
+2. Create your feature branch (`git checkout -b feature-name`)
+3. Commit changes (`git commit -m "Add feature"`)
+4. Push to branch (`git push origin feature-name`)
+5. Open a Pull Request 🚀
 
-Create feature branch
+---
 
-Submit PR 🚀
+## 📜 License
 
-📜 License
+This project is licensed under the **MIT License**.
 
-This project is licensed under the MIT License.
+---
 
-👨‍💻 Author
+## 👨‍💻 Author
 
-Manas Kumar Yadav
+**Manas Kumar Yadav**
+[GitHub](https://github.com/rookiecoder910) • [LinkedIn](#)
+
+---
