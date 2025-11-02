@@ -7,6 +7,6 @@ data class ListingCard(
     val price: String,    // Formatted price (e.g., "₹ 6,500/mo" or "₹ 150/day")
     val locationDetail: String, // e.g., "5 min walk from KIET"
     val imageUrl: String,
-    val rating: Double = 5.0,
+    val rating: Double ,
     val isGuestFavorite: Boolean = false // For the badge
 )
