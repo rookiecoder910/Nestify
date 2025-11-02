@@ -12,7 +12,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.nestify.ui.theme.NestifyTheme
+import io.github.jan.supabase.createSupabaseClient
+import io.github.jan.supabase.postgrest.Postgrest
 
+val supabaseClient=createSupabaseClient(
+    supabaseUrl = "https://zlfjejqjzqxlgxrhicuu.supabase.co" ,
+        supabaseKey ="public-anon-key"
+){
+    install(Postgrest)
+}
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
