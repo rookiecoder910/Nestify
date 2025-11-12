@@ -63,6 +63,7 @@ dependencies {
     implementation("io.github.jan-tennert.supabase:postgrest-kt")
     implementation("io.github.jan-tennert.supabase:auth-kt")
     implementation("io.github.jan-tennert.supabase:realtime-kt")
+    implementation("io.github.jan-tennert.supabase:gotrue-kt:2.6.1")
     //KTOR
     implementation("io.ktor:ktor-client-android:3.0.0-rc-1")
     //coil
@@ -75,4 +76,6 @@ dependencies {
     ksp("androidx.room:room-compiler:2.5.0")
     //latest composable
     implementation("androidx.compose.material3:material3:1.2.1")
+    //viewmodel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
 }
